@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+
+*{
+    margin:0;
+    box-sizing: border-box;
+}
+
+:root{
+    --light-red: hsl(0, 100%, 67%); 
+    --bg-light-red: hsl(0, 100%, 67%, 0.1); 
+    --orangey-yellow: hsl(39, 100%, 56%); 
+    --bg-orange-yellow: hsl(39, 100%, 56%, 0.1); 
+    --green-teal: hsl(166, 100%, 37%);
+    --bg-green-teal: hsl(166, 100%, 37%, 0.1);
+    --cobalt-blue: hsl(234, 85%, 45%);
+    --bg-cobalt-blue: hsl(234, 85%, 45%, 0.1);
+    --light-slate-blue: hsl(252, 100%, 67%);
+    --light-royal-blue: hsl(241, 81%, 54%);
+    --violet-blue: hsla(256, 72%, 46%, 1);
+    --persian-blue: hsla(241, 72%, 46%);
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.results{
+    background: linear-gradient(to bottom, var(--light-slate-blue), var(--light-royal-blue));
+    border-radius: 0% 0% 10% 10%;
+    text-align: center;
+    height: 50%;
+    width: 100%;
+}
+
+
+
+.circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.results h1{
+    font-size: 18px;
+    color: var(--pale-blue);
+    font-weight: 500;
+    padding: 20px;
+}
+
+
+.result-score{
+    background: linear-gradient(to bottom, var(--violet-blue), var(--persian-blue));
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;   
+    text-align: center;
+    color: white;
+    padding: 12px;
+
+}
+
+.result-score{
+    font-size: 12px;
+    color: var(--light-lavender);
+
+}
+
+.results p span {
+    color: white;
+    font-size: 50px;
+    font-weight: 600;
+    display: block; /*hace que el 100 sea un solo bloque */
+}
+
+.result-rank{
+    color: white;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.result-rank-text{
+    color: var(--light-lavender);
+    font-size: 12px;
+    margin: 0px 30px 15px;
+    color: var(--light-lavender);
+}
+
+.summary{
+    width: 100%;
+    background-color: white;
+    padding-bottom: 15px;
+
+}
+
+.summary .section-tittle{
+    font-size: 15px;
+    padding: 12px;
+}
+
+.reaction, .memory, .verbal, .visual{
+    display: flex;
+    color: var(--light-red);
+    background-color: var(--bg-light-red);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 800;
+    font-size: 10px;
+    width: 90%;
+    margin: auto;
+    border-radius: 10px;
+    align-items: center;
+    font-size: 12px;
+    margin-bottom: 8px;
+
+   
+}
+
+.score{
+    color: black;
+    margin-left: auto;
+    padding-right: 12px;
+}
+
+.score span {
+    color: black;
+    opacity: 0.4;
+}
+
+.stats img{
+    margin-left: 12px;
+    padding-right: 10px;
+}
+
+.memory{
+    background-color: var(--bg-orange-yellow);
+    color: var(--orangey-yellow);
+}
+
+.verbal{
+    background-color: var(--bg-green-teal);
+    color: var(--green-teal);
+}
+
+.visual{
+    background-color: var(--bg-cobalt-blue);
+    color: var(--cobalt-blue);
+}
+
+.continue{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button{
+    font-family: 'Hanken Grotesk', sans-serif;
+    background-color: var(--dark-gray-blue);
+    color: white;
+    border: none; /* Elimina el borde del botón */
+    border-radius: 15px; /* Añade bordes redondeados */
+    padding: 10px 150px; /* Ajusta el relleno para aumentar el área del botón */
+    width: 90%;
+    margin: 0 auto;
+}
+
+.continue .button{
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+@media (min-width: 450px){
+    body{
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        height: 600px;
+        background-color: rgba(211, 211, 211, 0.3);
+        
+    }
+
+    .summary{
+        width: 50%;
+        max-width: 250px;
+        border-radius: 0 10% 10% 0;
+    }
+
+    .results{
+        width: 50%;
+        max-width: 250px;
+        border-radius: 10% 0 0 10% ;
+    }
+
+
+    .continue {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+      }
+    
+      .button {
+        text-align: center; /* Centra el texto horizontalmente */
+        margin-left: 50px;
+        margin-right: 50px;
+        padding-left: 100px;
+        padding-right: 100px;
+      }
+
+
+}
